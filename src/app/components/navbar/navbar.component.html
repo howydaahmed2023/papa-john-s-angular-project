@@ -1,0 +1,93 @@
+<!-- intro section heading1 -->
+
+<ul class="container nav justify-content-end py-2 ps-lg-0">
+  <li class="nav-item">
+    <img src="assets/images/hotLine_english.png" alt="logo" />
+  </li>
+  <li class="nav-item">
+    <a class="nav-link pt-2" href="#">وظائف</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link pt-2" href="#">اتصل بنا</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link px-1" href="#"
+      ><img src="assets/images/english.png" alt=""
+    /></a>
+  </li>
+</ul>
+<div class="text-center my-3 logosm">
+  <img
+    src="assets/images/papalogo_sm_ar.png"
+    width="209px"
+    height="88px"
+    alt="logosm"
+  />
+</div>
+
+<!-- end section -->
+
+<!-- intro section heading2 -->
+
+<nav class="navbar navbar-expand-lg py-0 text-family">
+  <div class="container py-lg-0 pe-sm-0 ps-lg-0">
+    <img
+      src="assets/images/papalogo-ar.png"
+      alt="logo"
+      class="logo"
+      width="165px"
+      height="69.47px"
+    />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      @if(barBtn){<i class="fa-solid fa-bars fa-2x" (click)="showBtn()"></i>
+
+      }@else {
+      <i class="fa-solid fa-xmark fa-2x" (click)="hideBtn()"></i>
+      }
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            routerLink="/home"
+            >الصفحة الرئيسية</a
+          >
+        </li>
+        <!--start link has dropdown menu -->
+        <li class="nav-item submenu">
+          <a class="nav-link" href="#"> القائمة </a>
+          <ul class="list-unstyled">
+            <li><a href="#">العروض</a></li>
+            <li><a href="#">البيتزا</a></li>
+            <li><a href="#">المقبلات</a></li>
+            <li><a href="#">الحلويات والمشروبات</a></li>
+            <li><a href="#">كرانشى بابادياس الجديدة</a></li>
+          </ul>
+        </li>
+        <!--end link has dropdown menu -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">الجودة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/branches">الفروع</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/customer-service">خدمة العملاء</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end section -->

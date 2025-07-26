@@ -1,0 +1,27 @@
+h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 30px;
+}
+.form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+.form-select{
+  height: 50px;
+    border: 1px solid #ddd;
+    border-radius:4px;
+    padding:.375rem .75rem .375rem 2.25rem;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(../../../assets/icons/download.svg);
+    background-repeat: no-repeat;
+    background-position:0.75rem;
+    background-size: 16px 12px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Small & Medium devices */
+@media only screen and (max-width: 992px) {
+
+}

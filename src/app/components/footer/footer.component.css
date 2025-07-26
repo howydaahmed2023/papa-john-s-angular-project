@@ -1,0 +1,32 @@
+footer{
+  font-weight: 600;
+margin-bottom: -15px;
+
+}
+
+   footer a{
+    padding: 5px;
+    color: var(--nav-text2-color);
+
+   }
+   footer img{
+    border-radius: 8px;
+    background: #7d0e14;
+    padding: 3px;
+    margin-right: 2px;
+    margin-top: 6px;
+
+
+   }
+   .copy{
+    font-size: 14px;
+     color:var(--nav-text2-color);
+
+
+   }
+   .developer{
+    font-size: 11px;
+    color:var(--nav-text2-color)
+
+   }
+

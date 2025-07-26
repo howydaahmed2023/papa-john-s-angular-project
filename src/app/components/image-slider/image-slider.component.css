@@ -1,0 +1,14 @@
+
+.carousel img {
+  height: 440px;
+  object-fit: cover;
+}
+.carousel-indicators button{
+  width:12px;
+  height: 12px;
+ border: 1px solid black;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+padding: 20px;
+  background-color: #ab131b
+}

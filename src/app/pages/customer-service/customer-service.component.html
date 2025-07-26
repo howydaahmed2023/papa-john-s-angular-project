@@ -1,0 +1,175 @@
+<!-- start section1 -->
+<section class="container mt-4 pb-2">
+  <h1 class="fw-bold me-sm-0">خدمة العملاء</h1>
+</section>
+<!-- end section1 -->
+<!-- start section2 -->
+<div class="container">
+  <form
+    class="col-sm-10 col-md-6 mx-auto"
+    (ngSubmit)="onSubmit()"
+    #complaintForm="ngForm"
+  >
+    <div class="row">
+      <div class="col-sm-12 formtitle">
+        يمكنك التواصل معنا من خلال النموذج التالي:
+      </div>
+    </div>
+    <div class="row mb-3">
+      <!-- form-group Starts -->
+      <div class="col-sm-12 col-md-6 form-group">
+        <label class="form-label">الإسم</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          required=""
+          [(ngModel)]="complaint.name"
+        />
+      </div>
+      <!-- form-group Ends -->
+      <!-- form-group Starts -->
+      <div class="col-sm-10 col-md-6 form-group">
+        <label class="form-label">البريد الإلكترونى</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          required=""
+          [(ngModel)]="complaint.email"
+        />
+      </div>
+      <!-- form-group Ends -->
+    </div>
+
+    <div class="row mb-3">
+      <!-- form-group Starts -->
+      <div class="col-sm-10 col-md-6 form-group">
+        <label class="form-label">رقم الهاتف</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="01xxxxxxxxx"
+          pattern="(01)[0-9]{9}"
+          name="phone"
+          style="direction: ltr"
+          required=""
+          [(ngModel)]="complaint.phone"
+        />
+      </div>
+      <!-- form-group Ends -->
+      <!-- form-group Starts -->
+      <div class="col-sm-10 col-md-6 form-group">
+        <label class="form-label">العنوان</label>
+        <input
+          type="text"
+          class="form-control"
+          name="fulladdress"
+          required=""
+          [(ngModel)]="complaint.address"
+        />
+      </div>
+      <!-- form-group Ends -->
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-10 col-md-6 form-group">
+        <label for="sel1" class="form-label">نوع الشكوى</label>
+        <select
+          class="form-control"
+          aria-label="Default select example"
+          id="sel1"
+          name="complaintsType"
+          [(ngModel)]="complaint.complaintType"
+        >
+          <option selected value="الجودة">الجودة</option>
+          <option value="تأخير فى التوصيل">تأخير فى التوصيل</option>
+          <option value="أخرى">اخرى</option>
+        </select>
+      </div>
+
+      <div class="col-sm-10 col-md-6 form-group">
+        <label for="sel2" class="form-label">نوع الطلب</label>
+        <select
+          class="form-control"
+          id="sel2"
+          name="orderType"
+          [(ngModel)]="complaint.orderType"
+        >
+          <option value="توصيل للمنزل">توصيل للمنزل</option>
+          <option value="فى المطعم">فى المطعم</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-10 col-md-12 form-group">
+        <label for="comment" class="form-label">الرسالة</label>
+        <textarea
+          name="msg"
+          class="form-control"
+          rows="5"
+          id="message"
+          required=""
+          [(ngModel)]="complaint.message"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-sm-4 mx-auto mb-1">
+        <div
+          class="g-recaptcha"
+          data-callback="recaptchaCallback"
+          data-size="compact"
+          data-sitekey="6LejUbUUAAAAADX6xqh6vCdSEFNfyHZavmisgMju"
+        >
+          <div>
+            <div>
+              <iframe
+                title="reCAPTCHA"
+                width="164"
+                height="144"
+                role="presentation"
+                name="a-tzxeztkej22n"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LejUbUUAAAAADX6xqh6vCdSEFNfyHZavmisgMju&amp;co=aHR0cHM6Ly93d3cucGFwYWpvaG5zZWd5cHQuY29tOjQ0Mw..&amp;hl=en&amp;v=3jpV4E_UA9gZWYy11LtggjoU&amp;size=compact&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=tuad3ztd0j54"
+              ></iframe>
+            </div>
+            <textarea
+              id="g-recaptcha-response"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4 text-center">
+      <div class="col-sm-4 mx-auto">
+        <button
+          type="submit"
+          name="sendme"
+          class="btn btn-primary"
+          id="sendform"
+          [disabled]="!complaintForm.valid || !notRobot"
+        >
+          إرسل
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- end section2 -->
